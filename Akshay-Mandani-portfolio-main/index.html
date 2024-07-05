@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
 </head>
 
 <body>
@@ -207,9 +208,11 @@
 
         <section class="about-text">
           <p>
-            I am Akshay Mandani. I am Full Stack Website Developer from Surat, Gujarat, India.
-            I am proficient in ReactJS, AngularJS, NodeJs, ExpressJs, MySQL, JavaScript, WordPress,
-            HTML, and CSS. I've designed a handful of e-commerce websites. I've also designed a few WordPress websites.
+            I am Akshay Mandani. Currently, working as a Full Stack web developer at Boho Digital. I have 1+ year of
+            experience.
+            <!-- I am Akshay Mandani. I am Full Stack Website Developer from Surat, Gujarat, India. -->
+            I am proficient in ReactJS, NextJS, AngularJS, NodeJs, ExpressJs, MongoDB, MySQL, JavaScript, WordPress,
+            HTML and CSS. I've designed a handful of e-commerce websites. I've also designed a few WordPress websites.
           </p>
           <p>I worked as the Technical Team Lead for Spectrum 2023 (CVM university's tech fest event),
             where we constructed a full stack website using react js and node js for an activity that
@@ -396,11 +399,30 @@
 
             <li class="timeline-item">
 
+              <h4 class="h4 timeline-item-title">Full Stack Developer</h4>
+
+              <span class="span1">Boho Digital · Full-time</span>
+
+              <span id="duration2" class="span"></span>
+              <!-- <span class="span">Dec, 2023 — Present · 2 mos</span> -->
+
+              <p class="timeline-text1">
+                I developed a Next.js application for video calls, featuring user authentication, real-time video
+                communication, and integration with various APIs for enhanced functionality.
+                <!-- I created a React.js website for selling tiles and paint online. It supports listing and purchasing
+                tiles, as well as a variety of APIs for user login, visualizer login, Sign Up, and other tasks. -->
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
               <h4 class="h4 timeline-item-title">Frontend Developer</h4>
 
               <span class="span1">Digital Munkies · Internship</span>
 
-              <span class="span">Dec, 2023 — Present · 2 mos</span>
+              <span id="duration1" class="span"></span>
+              <!-- <span class="span">Dec, 2023 — Present · 2 mos</span> -->
 
               <p class="timeline-text1">
                 I created a React.js website for selling tiles and paint online. It supports listing and purchasing
@@ -418,7 +440,8 @@
 
               <span class="span1">TatvaSoft · Internship</span>
 
-              <span class="span">May, 2023 — June, 2023 · 1 mos</span>
+              <span id="duration" class="span"></span>
+              <!-- <span class="span">May, 2023 — June, 2023 · 1 mos</span> -->
 
               <p class="timeline-text1">
                 I built a React.js website to sell books online. It includes functionality for listing and purchasing
@@ -428,6 +451,60 @@
               </p>
 
             </li>
+
+            <script>
+              function calculateDuration(startDate, endDate) {
+                // Parse the dates
+                const start = new Date(startDate);
+                const end = new Date(endDate);
+
+                // Calculate the difference in months
+                let months = (end.getFullYear() - start.getFullYear()) * 12 + 1;
+                months -= start.getMonth();
+                months += end.getMonth();
+
+                // Ensure at least 1 month difference
+                months = months <= 0 ? 1 : months;
+
+                // Return the duration in "X mos" format
+                return `${months} month`;
+                <!-- return `${months} mos`; -->
+              }
+
+              const startDateTatvaSoft = "May, 2023";
+              const endDateTatvaSoft = "June, 2023";
+              const startDateDigitalMunkies = "Nov, 2023";
+              const endDateDigitalMunkies = "Feb, 2024";
+              const duration1 = calculateDuration(startDateDigitalMunkies, endDateDigitalMunkies);
+              const duration = calculateDuration(startDateTatvaSoft, endDateTatvaSoft);
+
+              document.getElementById('duration1').textContent = `${startDateDigitalMunkies} — ${endDateDigitalMunkies} · ${duration1}`;
+              document.getElementById('duration').textContent = `${startDateTatvaSoft} — ${endDateTatvaSoft} · ${duration}`;
+
+              function calculateDurationFromNow(startDate) {
+                // Parse the start date
+                const start = new Date(startDate);
+                // Get the current date
+                const end = new Date();
+
+                // Calculate the difference in months
+                let months = (end.getFullYear() - start.getFullYear()) * 12 + 1;
+                months -= start.getMonth();
+                months += end.getMonth();
+
+                // Ensure at least 1 month difference
+                months = months <= 0 ? 1 : months;
+
+                // Return the duration in "X mos" format
+                return `${months} month`;
+              }
+
+              const startDateBohoDigital = "March, 2024";
+              const duration2 = calculateDurationFromNow(startDateBohoDigital);
+
+              document.getElementById('duration2').textContent = `${startDateBohoDigital} — Present · ${duration2}`;
+            </script>
+
 
           </ol>
 
@@ -443,6 +520,19 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">React Js</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Next Js</h5>
                 <data value="80">80%</data>
               </div>
 
@@ -494,6 +584,19 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
+                <h5 class="h5">MongoDB</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
                 <h5 class="h5">MySQL</h5>
                 <data value="80">80%</data>
               </div>
@@ -521,11 +624,11 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">JavaScript</h5>
-                <data value="90">90%</data>
+                <data value="95">95%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
+                <div class="skill-progress-fill" style="width: 95%;"></div>
               </div>
 
             </li>
